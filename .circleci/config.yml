@@ -14,12 +14,11 @@ jobs:
             sudo rm /var/lib/dpkg/lock
             sudo dpkg --configure -a
             sudo apt-get install software-properties-common
-            sudo add-apt-repository ppa:mc3man/xerus-media
-            sudo apt-get update --allow
+            sudo add-apt-repository ppa:fkrull/deadsnakes
+            sudo apt-get update
             sleep 5
             sudo rm /var/lib/dpkg/lock
             sudo dpkg --configure -a
-            sudo apt-get install pip
             sudo apt-get install python3.5
             sleep 5
             python -m pip install -r requirements.txt
